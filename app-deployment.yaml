@@ -31,7 +31,7 @@ spec:
     spec:
       containers:
         - name: react-app
-          image: react-image
+          image: CONTAINER_IMAGE
           imagePullPolicy: Always
           securityContext:
             privileged: false
