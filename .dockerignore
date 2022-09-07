@@ -1,6 +1,5 @@
-# All files that are not required in our build
-Dockerfile
+npm-debug.log
 .dockerignore
-.gitignore
-
-node_modules
+**/.git
+**/.DS_Store
+**/node_modules
