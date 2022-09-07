@@ -6,7 +6,9 @@ spec:
   type: LoadBalancer
   ports:
     - port: 80
-      targetPort: 8080
+      targetPort: 80
+      protocol: TCP
+      nodePort: 31000
   selector:
     app: react-app
 ---
@@ -31,11 +33,6 @@ spec:
     spec:
       containers:
         - name: react-app
-          image: CONTAINER_IMAGE
-          imagePullPolicy: Always
-          securityContext:
-            privileged: false
-            readOnlyRootFilesystem: true
-            allowPrivilegeEscalation: false
+          image: omar313/react-image
           ports:
-            - containerPort: 8080
+            - containerPort: 80
