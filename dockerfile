@@ -1,3 +1,8 @@
-FROM nginx:stable-alpine
+FROM node:current-alpine
+WORKDIR /app
 
-COPY build/ /usr/share/nginx/html
+COPY package*.json ./
+RUN npm install
+
+COPY . .
+CMD ["npm", "start"]
