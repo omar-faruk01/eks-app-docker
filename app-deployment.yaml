@@ -20,7 +20,7 @@ spec:
         app: nginx-webapp
     spec:
       containers:
-      - image: 769145638808.dkr.ecr.us-west-2.amazonaws.com/cicdstack-ecrforbootcamppy76510236-nllkfb697b2l
+      - image: 769145638808.dkr.ecr.us-west-2.amazonaws.com/cicdstack-ecrforbootcamppy76510236-nllkfb697b2l:latest
         name: webapp
         imagePullPolicy: Always
         resources: {}
